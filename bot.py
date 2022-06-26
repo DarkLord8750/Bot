@@ -292,7 +292,7 @@ async def requestHandler(bot:Update, msg:Message):
                 )
             )
 
-            replyText = f"<b>👋 Hello {mentionUser} !!\n\n📍 Your Request for {contentRequested} has been submitted to the admins.\n\n🚀 Your Request Will Be Uploaded soon.\n📌 Please Note that Admins might be busy. So, this may take more time.\n\n👇 See Your Request Status Here 👇\n\n Enjoy your day. \n\n @movieshubbyuvesh </b>"
+            replyText = f"<b>👋 Hello {mentionUser} !!\n\n📍 Your Request for {contentRequested} has been submitted to the admins.\n\n🚀 Your Request Will Be Uploaded soon.\n📌 Please Note that Admins might be busy. So, this may take more time.\n\n👇 See Your Request Status Here 👇\n\n Enjoy your day. \n\n @movieshubbyuveshnew </b>"
 
             # Sending message for user in group
             await msg.reply_text(
@@ -332,12 +332,12 @@ async def callBackButton(bot:Update, callback_query:CallbackQuery):
                     data = callback_query.data  # Callback Data
                     if data == "rejected":
                         return await callback_query.answer(
-                            "This request is rejected💔...\nAlready On Group @movieshubbyuvesh",
+                            "This request is rejected💔...\nAlready On Group @movieshubbyuveshnew",
                             show_alert = True
                         )
                     elif data == "completed":
                         return await callback_query.answer(
-                            "This request Is Completed🥳...\nCheckout in @movieshhubbyuvesh\n\n Thanks For requesting!😊",
+                            "This request Is Completed🥳...\nCheckout in @movieshhubbyuveshnew\n\n Thanks For requesting!😊",
                             show_alert = True
                         )
                     user = await bot.get_chat_member(int(channelID), callback_query.from_user.id)
@@ -390,7 +390,7 @@ async def callBackButton(bot:Update, callback_query:CallbackQuery):
                         )
 
                         # Result of request sent to group
-                        replyText = f"<b>Dear {mentionUser}🧑\nYour request for {contentRequested} {groupResult}\n👍Thanks for requesting! \n\n Check out on movieshubbyuvesh </b>"
+                        replyText = f"<b>Dear {mentionUser}🧑\nYour request for {contentRequested} {groupResult}\n👍Thanks for requesting!\n\n Check out on movieshubbyuveshnew </b>"
                         await bot.send_message(
                             int(groupID),
                             replyText,
